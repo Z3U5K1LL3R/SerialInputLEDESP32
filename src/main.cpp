@@ -2,7 +2,7 @@
 
 #define LEDPIN 5
 
-String inputString = ""; 
+String inputString = "";
 
 void processInput();
 
@@ -32,7 +32,6 @@ void loop()
 void processInput()
 {
   int blinkCount = inputString.toInt();
-
   if (blinkCount >= 1 && blinkCount <= 5)
   {
     Serial.println("Blinking " + String(blinkCount) + " times...");
@@ -43,6 +42,7 @@ void processInput()
       delay(500);
       digitalWrite(LEDPIN, LOW);
       delay(500);
+      Serial.println("Blink" + String(i+1));
     }
   }
   else
